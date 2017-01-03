@@ -33,11 +33,11 @@ App.propTypes = {
 
 // Which props do we want to inject, given the global state?
 // Note: use https://github.com/faassen/reselect for better performance.
-function select(state) {
+function mapStateToProps(state) {
   return {
     visibleTodos: state.todos,
   };
 }
 
 // Wrap the component to inject dispatch and state into it
-export default connect(select)(App);
+export default connect(mapStateToProps)(App);
